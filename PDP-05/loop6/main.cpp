@@ -3,36 +3,30 @@ using namespace std;
 
 int main()
 {
-    int x;
-    int max = INT32_MIN;
-    int min = INT32_MAX;
-    bool berhenti = false;
+    int x, max, min;
 
     cout << "Program Ini Akan Berhenti Jika Anda Menginput Angka -99\n" << endl;
 
-    while (berhenti == false)
+    while (true)
     {
         cout << "Masukkan Nilai Anda : ";
         cin >> x;
 
-        if (max < x && x != -99)
-        {
-            max = x;
-        }
-
-        if (min > x && x != -99)
-        {
-            min = x;
-        }
-
-        if (x == -99)
-        {
-            berhenti = true;
-        }
-
-        if (berhenti)
+         if (x == -99)
         {
             break;
+        }
+
+        if (x != -99)
+        {
+            if (max < x)
+            {
+                max = x;
+            }
+            if (min > x)
+            {
+                min = x;
+            }
         }
     }
 
