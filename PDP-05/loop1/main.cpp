@@ -4,8 +4,8 @@ using namespace std;
 
 int main()
 {
-    int i, j;
-    for (i = 100; i > 0; i--)
+    int j = 0;
+    for (int i = 100; i > 0; i--)
     {
         j++;
         cout << "i = " << i << " dan j = " << j << endl;
